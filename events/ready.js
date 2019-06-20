@@ -11,7 +11,7 @@ module.exports.run = client => {
 
   console.log(chalk.green("[READY]:"));
 
-  const channel = client.channels.get(ids.temp);
+  const channel = client.channels.get(ids.restarts);
   if (!channel) return;
   channel.send({
     embed: {
