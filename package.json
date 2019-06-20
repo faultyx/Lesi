@@ -1,0 +1,24 @@
+{
+  "name": "lesi",
+  "version": "0.0.1",
+  "description": "Lesi the Simple Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "ping.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faultyx/Lesi.git"
+  },
+  "keywords": [
+    "discord-js",
+    "discord_js",
+    "discord-bot"
+  ],
+  "author": "Faulty X [inac/fd]#1018",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faultyx/Lesi/issues"
+  },
+  "homepage": "https://github.com/faultyx/Lesi#readme"
+}
