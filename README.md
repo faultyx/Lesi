@@ -4,4 +4,4 @@
 ### Modules
 [npm](https://www.npmjs.com/)
 
-**chalk | discord.js | fs | moment + moment-duration-format | kitsu | node-fetch | node-superfetch | random-puppy | weather-js | memejs**
+**chalk | discord.js | fs | moment + moment-duration-format | kitsu | node-fetch | node-superfetch | random-puppy | weather-js | memejs | sqlite3**
