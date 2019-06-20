@@ -8,6 +8,11 @@ const tables = {
     "id INTEGER NOT NULL",
     "prefix TEXT NOT NULL",
     "blacklisted TEXT NOT NULL"
+  ],
+  blacklist: [
+    "id TEXT NOT NULL",
+    "reason TEXT NOT NULL",
+    "blacklisted TEXT NOT NULL"
   ]
 }
   for(let table in tables) {
