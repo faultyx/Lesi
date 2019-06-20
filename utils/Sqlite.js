@@ -6,7 +6,8 @@ console.log(chalk.grey("[SQLITE]:") + " Initialised.");
 const tables = {
   guild: [
     "id INTEGER NOT NULL",
-    "prefix TEXT NOT NULL"
+    "prefix TEXT NOT NULL",
+    "blacklisted TEXT NOT NULL"
   ]
 }
   for(let table in tables) {
