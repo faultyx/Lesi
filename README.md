@@ -1,2 +1,2 @@
 # Lesi
-Lesi the Simple Discord Bot.
+❤️ Lesi the Simple Discord Bot.
