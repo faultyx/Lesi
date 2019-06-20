@@ -44,5 +44,7 @@ fs.readdir("./commands", (err, files) => {
   });
 });
 
+require("./utils/Sqlite");
+
 client.login(keys.l_token)
 .catch(console.error);
