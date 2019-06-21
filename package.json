@@ -20,5 +20,19 @@
   "bugs": {
     "url": "https://github.com/faultyx/Lesi/issues"
   },
-  "homepage": "https://github.com/faultyx/Lesi#readme"
+  "homepage": "https://github.com/faultyx/Lesi#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fs": "0.0.1-security",
+    "kitsu": "^7.0.4",
+    "memejs": "^1.0.7",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
+    "node-fetch": "^2.6.0",
+    "node-superfetch": "^0.1.9",
+    "random-puppy": "^1.1.0",
+    "sqlite": "^3.0.3",
+    "sqlite3": "^4.0.9",
+    "weather-js": "^2.0.0"
+  }
 }
