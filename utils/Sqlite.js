@@ -1,18 +1,33 @@
 const sql = require("sqlite3"),
-chalk = require("chalk"),
-db = new sql.Database("lesi_db.sqlite");
+chalk = require("chalk");
+const db = new sql.Database("lesi_db.sqlite");
 console.log(chalk.grey("[SQLITE]:") + " Initialised.");
 
 const tables = {
   guild: [
-    "id INTEGER NOT NULL",
+    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
     "prefix TEXT NOT NULL",
-    "blacklisted TEXT NOT NULL"
+    "guild TEXT NOT NULL"
   ],
-  blacklist: [
-    "id TEXT NOT NULL",
-    "reason TEXT NOT NULL",
-    "blacklisted TEXT NOT NULL"
+  guilduser: [
+    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
+    "snowflake TEXT NOT NULL",
+    "description TEXT NOT NULL"
+  ],
+  globaluser: [
+    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
+    "snowflake TEXT NOT NULL",
+    "description TEXT NOT NULL"
+  ],
+  userblacklist: [
+    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
+    "snowflake TEXT NOT NULL",
+    "reasonOfBlacklist TEXT NOT NULL"
+  ],
+  guildblacklist: [
+    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
+    "guild TEXT NOT NULL",
+    "reasonOfBlacklist TEXT NOT NULL"
   ]
 }
   for(let table in tables) {
@@ -20,3 +35,4 @@ const tables = {
   		console.log(chalk.blue("[SQLITE: TABLE: CREATE]:") + ` ${table}`);
   	})
   }
+module.exports = db;
