@@ -17,7 +17,7 @@ const tables = {
   globaluser: [
     "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
     "snowflake TEXT NOT NULL",
-    "description TEXT NOT NULL"
+    "globalDescription TEXT NOT NULL"
   ],
   userblacklist: [
     "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
