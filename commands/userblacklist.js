@@ -1,7 +1,7 @@
 module.exports.run = async (client, msg, args, ids, keys, db, Discord) => {
 
   let role_guild = client.guilds.get(ids.support_server_id).roles.find(r => r.name.toLowerCase() === "[connect]").id;
-  if (!msg.member.roles.get(role_guild)) return msg.reply("This command can only be used by the devleoper & staff.");
+  if (!msg.member.roles.get(role_guild)) return msg.reply("This command can only be used by the develeoper & staff.");
 
   let id;
   if (msg.mentions.users.first()) {
