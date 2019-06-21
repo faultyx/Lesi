@@ -47,7 +47,7 @@ module.exports.help = {
 };
 module.exports.conf = {
   aliases: ["ubl", "blu"],
-  guildOnly: false,
+  guildOnly: true,
   ownerOnly: false,
   developerOnly: false,
   hiddenFromHelp: true
