@@ -6,18 +6,7 @@ console.log(chalk.grey("[SQLITE]:") + " Initialised.");
 const tables = {
   guild: [
     "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
-    "prefix TEXT NOT NULL",
     "guild TEXT NOT NULL"
-  ],
-  guilduser: [
-    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
-    "snowflake TEXT NOT NULL",
-    "description TEXT NOT NULL"
-  ],
-  globaluser: [
-    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
-    "snowflake TEXT NOT NULL",
-    "globalDescription TEXT NOT NULL"
   ],
   userblacklist: [
     "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL",
