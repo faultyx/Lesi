@@ -6,7 +6,7 @@ module.exports.run = async (client, msg, args, ids, keys) => {
   return text.replace(/'/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
   else
   return text;
-}
+  }
   let evaluateCode = args.join(" ");
   if (msg.author.id !== keys.developerID) {
       return;
