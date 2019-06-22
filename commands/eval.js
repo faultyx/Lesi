@@ -23,13 +23,13 @@ module.exports.run = async (client, msg, args, ids, keys) => {
      evaled = require("util").inspect(evaled);
      if (evaled.includes(client.token)) {
        return;
-      }
+      };
 
       if (evaled.length > 1020) {
         evaled = evaled.substr(0, 990);
-      }
+      };
 
-      msg.react("✅")
+      msg.react("✅");
 
       msg.channel.send({
         embed: {
@@ -56,7 +56,7 @@ module.exports.run = async (client, msg, args, ids, keys) => {
 
     } catch (err) {
 
-      msg.react("❎")
+      msg.react("❎");
 
       msg.channel.send({
         embed: {
