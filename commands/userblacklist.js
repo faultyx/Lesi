@@ -1,7 +1,7 @@
-module.exports.run = async (client, msg, args, ids, keys, db) => {
+module.exports.run = async (client, msg, args, ids, keys, Sqlite) => {
 
   let role_guild = client.guilds.get(ids.support_server_id).roles.find(r => r.name.toLowerCase() === "[connect]").id;
-  if (!msg.member.roles.get(role_guild)) return msg.reply("This command can only be used by the develeoper & staff.");
+  if (!msg.member.roles.get(role_guild)) return;
 
   let id;
   if (msg.mentions.users.first()) {
@@ -16,11 +16,11 @@ module.exports.run = async (client, msg, args, ids, keys, db) => {
 
   let moderator = msg.guild.member(msg.author);
 
-  db.get(`SELECT * FROM userblacklist WHERE snowflake = ?`, user.id, (err, r) => {
+  Sqlite.get(`SELECT * FROM userblacklist WHERE snowflake = ?`, user.id, (err, r) => {
     if (err) console.log(err);
     if (r) return msg.reply("That user is already blacklisted.");
 
-  db.run(`INSERT INTO userblacklist (snowflake, reasonOfBlacklist) VALUES (?, ?)`, user.id, reason, (err) => {
+  Sqlite.run(`INSERT INTO userblacklist (snowflake, reasonOfBlacklist) VALUES (?, ?)`, user.id, reason, (err) => {
     if (err) console.log(err);
     return client.channels.get(ids.blacklists).send({
       embed: {
