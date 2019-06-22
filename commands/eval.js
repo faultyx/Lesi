@@ -26,7 +26,7 @@ module.exports.run = async (client, msg, args, ids, keys) => {
       };
 
       if (evaled.length > 1020) {
-        evaled = evaled.substr(0, 990);
+        evaled = evaled.substring(0, 990);
       };
 
       msg.react("✅");
