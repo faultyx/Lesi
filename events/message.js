@@ -1,15 +1,28 @@
 const keys = require("../keys"),
-ids = require("../ids");
+ids = require("../ids"),
+chalk = require("chalk");
 
 const db = require("../utils/Sqlite");
+const Settings = require("../models/settings");
 module.exports.run = async (client, msg) => {
 
   if (msg.author.bot) return;
 
   if (msg.guild && !msg.member) await msg.guild.fetchMember(msg.author);
 
+  let findPrefix;
+  Settings.findOne({
+    guildID: msg.guild.id
+  }, (err, settings) => {
+    if (err) console.log(err);
+    if (!settings) {
+      findPrefix = keys.defaultPrefix;
+    } else {
+    findPrefix = settings.prefix;
+    }
+
   const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
-  const prefix = msg.content.match(prefixMention) ? msg.content.match(prefixMention)[0] : keys.defaultPrefix;
+  const prefix = msg.content.match(prefixMention) ? msg.content.match(prefixMention)[0] : findPrefix;
 
   if (!msg.content.startsWith(prefix)) return;
 
@@ -67,7 +80,23 @@ module.exports.run = async (client, msg) => {
       }
     });
   };
+  if (cmd.conf.nsfw && !msg.channel.nsfw) {
+    return msg.channel.send({
+      embed: {
+        color: 0xff3e28,
+        timestamp: new Date(),
+        title: "Wrong Channel",
+        description: `\`CMD: ${cmd.help.nam}\`\nThis command can only be used in a nsfw channel.`,
+        footer: {
+          text: msg.author.tag,
+          icon_url: msg.author.displayAvatarURL
+        }
+      }
+    });
+  };
 
   cmd.run(client, msg, args, ids, keys, db);
+
+  });
 
 };

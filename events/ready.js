@@ -1,6 +1,11 @@
 const chalk = require("chalk"),
-ids = require("../ids");
-
+ids = require("../ids"),
+keys = require("../keys");
+const Settings = require("../models/settings");
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/lesi_new_db", {
+  useNewUrlParser: true
+}).then(() => console.log(chalk.grey("[MONGOOSE: CONNECTED]:")));
 module.exports.run = client => {
   client.user.setPresence({
     game: {
@@ -9,9 +14,26 @@ module.exports.run = client => {
     }
   });
 
+  client.guilds.keyArray().forEach(id => {
+    Settings.findOne({
+      guildID: id
+    }, (err, settings) => {
+      if (!settings) {
+        async () => {
+        const newSettings = new Settings({
+          _id: mongoose.Schema.Types.ObjectId,
+          guildID: id,
+          prefix: keys.defaultPrefix
+        })
+        await newSettings.save().catch(err => console.log(err));
+       }
+      }
+    });
+  });
+
   console.log(chalk.green("[READY]:"));
 
-  const channel = client.channels.get(ids.restarts);
+  const channel = client.channels.get(ids.temp);
   if (!channel) return;
   channel.send({
     embed: {
