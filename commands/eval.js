@@ -10,10 +10,10 @@ module.exports.run = async (client, msg, args, ids, keys) => {
   let evaluateCode = args.join(" ");
   if (msg.author.id !== keys.developerID) {
       return;
-    }
+    };
     if (!evaluateCode) {
       return msg.reply("Please give some code to evaluate!");
-    }
+    };
 
     try {
 
