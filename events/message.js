@@ -2,7 +2,7 @@ const keys = require("../keys"),
 ids = require("../ids"),
 chalk = require("chalk");
 
-const db = require("../utils/Sqlite");
+const Sqlite = require("../utils/Sqlite");
 const Settings = require("../models/settings");
 module.exports.run = async (client, msg) => {
 
@@ -28,7 +28,7 @@ module.exports.run = async (client, msg) => {
 
   const args = msg.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  db.get(`SELECT * FROM userblacklist WHERE snowflake = ?`, msg.author.id, (err, r) => {
+  Sqlite.get(`SELECT * FROM userblacklist WHERE snowflake = ?`, msg.author.id, (err, r) => {
       if (err) console.log(err);
       if (r) return msg.reply(`You are blacklisted from the bot for reason: \`${r.reasonOfBlacklist}\` | You can contact the developer or staff in: ${ids.support_server} to make a appeal!`)
     });
@@ -95,7 +95,7 @@ module.exports.run = async (client, msg) => {
     });
   };
 
-  cmd.run(client, msg, args, ids, keys, db);
+  cmd.run(client, msg, args, ids, keys, Sqlite);
 
   });
 
