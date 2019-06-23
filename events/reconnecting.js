@@ -1,4 +1,6 @@
 const chalk = require("chalk");
-module.exports.run = (client, guild) => {
+module.exports = {
+  execute(client, guild) {
   console.log(chalk.red(`[RECONNECTING: AT]: ${new Date()}`));
+  }
 };

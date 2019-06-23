@@ -4,7 +4,10 @@ chalk = require("chalk");
 
 const Sqlite = require("../utils/Sqlite");
 const Settings = require("../models/settings");
-module.exports.run = async (client, msg) => {
+module.exports = {
+  execute(client, msg) {
+
+  async () => {
 
   if (msg.author.bot) return;
 
@@ -99,4 +102,7 @@ module.exports.run = async (client, msg) => {
 
   });
 
+  }
+
+  }
 };

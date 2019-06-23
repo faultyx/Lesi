@@ -1,6 +1,8 @@
 const ids = require("../ids");
-module.exports.run = (client, guild) => {
-  let channel = client.channels.get(ids.guild_join);
+module.exports = {
+  execute(client, guild) {
+  // let channel = client.channels.get(ids.guild_join);
+  let channel = client.channels.get(ids.temp);
   if (!channel) return;
   channel.send({
     embed: {
@@ -12,4 +14,5 @@ module.exports.run = (client, guild) => {
       description: `**Owner:** \`[${guild.owner.user.tag} | ${guild.owner.id}]\`\n**Server:** \`${guild.name.substring(0, 100)}\`\n**Member Count:** \`${guild.memberCout}\``
     }
   })
+  }
 };

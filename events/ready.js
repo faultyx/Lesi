@@ -3,10 +3,12 @@ ids = require("../ids"),
 keys = require("../keys"),
 mongoose = require("mongoose");
 const Settings = require("../models/settings");
+const User = require("../models/user");
 mongoose.connect("mongodb://localhost:27017/lesi_new_db", {
   useNewUrlParser: true
 }).then(() => console.log(chalk.grey("[MONGOOSE: CONNECTED]:")));
-module.exports.run = client => {
+module.exports = {
+  execute(client) {
   client.user.setPresence({
     game: {
       type: 0,
@@ -30,7 +32,6 @@ module.exports.run = client => {
       }
     });
   });
-
   console.log(chalk.green("[READY]:"));
 
   const channel = client.channels.get(ids.restarts);
@@ -49,4 +50,5 @@ module.exports.run = client => {
       }
     }
   });
+  }
 };
