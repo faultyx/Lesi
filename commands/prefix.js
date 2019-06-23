@@ -1,5 +1,6 @@
 const Settings = require("../models/settings");
-module.exports.run = async (client, msg, args, ids, keys) => {
+module.exports = {
+  execute(client, msg, args, ids, keys) {
   if (!msg.member.hasPermission("MANAGE_GUILD")) return;
   Settings.findOne({
     guildID: msg.guild.id
@@ -11,6 +12,8 @@ module.exports.run = async (client, msg, args, ids, keys) => {
     Settings.updateOne({guildID: msg.guild.id, prefix: newPrefix}).then(() => msg.reply(`Set new guild prefix to: \`${newPrefix}\``));
   }
   });
+
+  }
 };
 module.exports.help = {
   nam: "prefix",

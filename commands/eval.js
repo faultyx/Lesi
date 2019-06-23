@@ -1,19 +1,20 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (client, msg, args, ids, keys) => {
+module.exports = {
+  execute: async (client, msg, args, ids, keys) => {
   function clean(text) {
   if (typeof(text) === "string")
   return text.replace(/'/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
   else
   return text;
-  }
+}
   let evaluateCode = args.join(" ");
   if (msg.author.id !== keys.developerID) {
       return;
-    };
+    }
     if (!evaluateCode) {
       return msg.reply("Please give some code to evaluate!");
-    };
+    }
 
     try {
 
@@ -23,13 +24,13 @@ module.exports.run = async (client, msg, args, ids, keys) => {
      evaled = require("util").inspect(evaled);
      if (evaled.includes(client.token)) {
        return;
-      };
+      }
 
       if (evaled.length > 1020) {
-        evaled = evaled.substring(0, 990);
-      };
+        evaled = evaled.substr(0, 990);
+      }
 
-      msg.react("✅");
+      msg.react("✅")
 
       msg.channel.send({
         embed: {
@@ -56,7 +57,7 @@ module.exports.run = async (client, msg, args, ids, keys) => {
 
     } catch (err) {
 
-      msg.react("❎");
+      msg.react("❎")
 
       msg.channel.send({
         embed: {
@@ -81,6 +82,8 @@ module.exports.run = async (client, msg, args, ids, keys) => {
         }
       });
     }
+
+  }
 };
 module.exports.help = {
   nam: "eval",

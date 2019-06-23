@@ -1,4 +1,5 @@
-module.exports.run = async (client, msg, args, ids, keys, Sqlite) => {
+module.exports = {
+  execute(client, msg, args, ids, keys, Sqlite) {
 
   let role_guild = client.guilds.get(ids.support_server_id).roles.find(r => r.name.toLowerCase() === "[connect]").id;
   if (!msg.member.roles.get(role_guild)) return;
@@ -37,6 +38,8 @@ module.exports.run = async (client, msg, args, ids, keys, Sqlite) => {
         }) && msg.reply(`\`[${user.tag} | ${user.id}]\` was blacklisted from the bot.`);
   });
   });
+
+  }
 };
 module.exports.help = {
   nam: "userblacklist",

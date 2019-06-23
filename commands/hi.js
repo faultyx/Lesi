@@ -1,5 +1,8 @@
-module.exports.run = async (client, msg, args, ids, keys) => {
+module.exports = {
+  execute(client, msg, args, ids, keys) {
   return msg.reply("Hey! >:D");
+
+  }
 };
 
 module.exports.help = {
