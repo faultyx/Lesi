@@ -7,11 +7,13 @@ const Settings = require("../models/settings");
 module.exports = {
   execute(client, msg) {
 
-  async () => {
-
   if (msg.author.bot) return;
 
+  async () => {
+
   if (msg.guild && !msg.member) await msg.guild.fetchMember(msg.author);
+
+  };
 
   let findPrefix;
   Settings.findOne({
@@ -101,8 +103,6 @@ module.exports = {
   cmd.execute(client, msg, args, ids, keys, Sqlite);
 
   });
-
-  }
 
   }
 };
