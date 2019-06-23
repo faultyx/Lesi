@@ -2,7 +2,6 @@ const Settings = require("../models/settings");
 module.exports = {
   execute(client, msg, args, ids, keys) {
   if (!msg.member.hasPermission("MANAGE_GUILD")) return;
-  try {
   Settings.findOne({
     guildID: msg.guild.id
   }, (err, settings) => {
@@ -10,15 +9,9 @@ module.exports = {
     return msg.channel.send(`Current Guild Prefix: \`${settings.prefix}\``);
   } else {
     let newPrefix = args.join(" ");
-    async () => {
     Settings.updateOne({guildID: msg.guild.id, prefix: newPrefix}).then(() => msg.reply(`Set new guild prefix to: \`${newPrefix}\``));
   }
-  }
-  })
-} catch (error) {
-  if (error) console.log(error);
-  return msg.reply(`There was an error:\n\`${error.message}\``);
-}
+  });
 
   }
 };
