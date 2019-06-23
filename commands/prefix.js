@@ -10,7 +10,9 @@ module.exports = {
     return msg.channel.send(`Current Guild Prefix: \`${settings.prefix}\``);
   } else {
     let newPrefix = args.join(" ");
+    async () => {
     Settings.updateOne({guildID: msg.guild.id, prefix: newPrefix}).then(() => msg.reply(`Set new guild prefix to: \`${newPrefix}\``));
+  }
   }
   })
 } catch (error) {
