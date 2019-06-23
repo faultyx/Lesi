@@ -17,6 +17,8 @@ module.exports = {
 
   let moderator = msg.guild.member(msg.author);
 
+  try {
+
   Sqlite.get(`SELECT * FROM userblacklist WHERE snowflake = ?`, user.id, (err, r) => {
     if (err) console.log(err);
     if (r) return msg.reply("That user is already blacklisted.");
@@ -37,7 +39,11 @@ module.exports = {
           }
         }) && msg.reply(`\`[${user.tag} | ${user.id}]\` was blacklisted from the bot.`);
   });
-  });
+  })
+} catch (error) {
+  if (error) console.log(error);
+  return msg.reply(`There was an error:\n\`${error.message}\``);
+}
 
   }
 };
