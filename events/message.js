@@ -5,15 +5,11 @@ chalk = require("chalk");
 const Sqlite = require("../utils/Sqlite");
 const Settings = require("../models/settings");
 module.exports = {
-  execute(client, msg) {
+  execute: async (client, msg) => {
 
   if (msg.author.bot) return;
 
-  async () => {
-
   if (msg.guild && !msg.member) await msg.guild.fetchMember(msg.author);
-
-  };
 
   let findPrefix;
   Settings.findOne({
