@@ -3,7 +3,6 @@ ids = require("../ids"),
 keys = require("../keys"),
 mongoose = require("mongoose");
 const Settings = require("../models/settings");
-const User = require("../models/user");
 mongoose.connect("mongodb://localhost:27017/lesi_new_db", {
   useNewUrlParser: true
 }).then(() => console.log(chalk.grey("[MONGOOSE: CONNECTED]:")));
