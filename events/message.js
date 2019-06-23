@@ -95,7 +95,7 @@ module.exports.run = async (client, msg) => {
     });
   };
 
-  cmd.run(client, msg, args, ids, keys, Sqlite);
+  cmd.execute(client, msg, args, ids, keys, Sqlite);
 
   });
 
