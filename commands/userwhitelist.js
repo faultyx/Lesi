@@ -19,42 +19,42 @@ module.exports = {
 
   Sqlite.get(`SELECT * FROM userblacklist WHERE snowflake = ?`, user.id, (err, r) => {
     if (err) console.log(err);
-    if (r) return msg.reply("That user is already blacklisted.");
+    if (!r) return msg.reply("That user is not blacklisted.");
 
-  Sqlite.run(`INSERT INTO userblacklist (snowflake, reasonOfBlacklist) VALUES (?, ?)`, user.id, reason, (err) => {
+  Sqlite.run(`DELETE FROM userblacklist WHERE snowflake = ?`, user.id, (err) => {
     if (err) console.log(err);
     try {
-      user.send(`You were blacklisted from using me, for reason: \`${reason}\``);
+      user.send(`You were whitelisted from using me :boom:! For reason: \`${reason}\``);
     } catch (error) {
-      return msg.channel.send("Could not notify user of blacklist.");
+      return msg.channel.send("Could not notify user of whitelist.");
     }
-    return client.channels.get(ids.blacklists).send({
+    return client.channels.get(ids.whitelists).send({
       embed: {
             color: 0xf4bc42,
             timestamp: new Date(),
             author: {
-              name: "User Blacklist",
+              name: "User Whitelist",
               icon_url: user.displayAvatarURL
             },
-            description: `\`[${user.tag} | ${user.id}]\` was blacklisted by
+            description: `\`[${user.tag} | ${user.id}]\` was whitelisted by
             **${msg.author.tag}** | ${moderator.highestRole.toString()}
             for reason: \`${reason}\``
           }
-        }) && msg.reply(`\`[${user.tag} | ${user.id}]\` was blacklisted from the bot.`);
+        }) && msg.reply(`\`[${user.tag} | ${user.id}]\` was whitelisted from the bot.`);
   });
   })
 
   }
 };
 module.exports.help = {
-  nam: "userblacklist",
+  nam: "userwhitelist",
   mod: "core",
-  desc: "Blacklist a user from the bot.",
-  usa: "[prefix]userblacklist [userID] [reason]",
-  exa: [">userblacklist 12345678910 Abuse"]
+  desc: "Whitelist a user from the bot.",
+  usa: "[prefix]userwhitelist [userID] [reason]",
+  exa: [">userwhitelist 12345678910 Time Over!"]
 };
 module.exports.conf = {
-  aliases: ["ubl", "blu"],
+  aliases: ["uwl", "wlu"],
   guildOnly: true,
   ownerOnly: false,
   developerOnly: false,
