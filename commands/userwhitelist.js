@@ -23,12 +23,7 @@ module.exports = {
 
   Sqlite.run(`DELETE FROM userblacklist WHERE snowflake = ?`, user.id, (err) => {
     if (err) console.log(err);
-    try {
-      user.send(`You were whitelisted from using me :boom:! For reason: \`${reason}\``);
-    } catch (error) {
-      return msg.channel.send("Could not notify user of whitelist.");
-    }
-    return client.channels.get(ids.whitelists).send({
+    client.channels.get(ids.whitelists).send({
       embed: {
             color: 0xf4bc42,
             timestamp: new Date(),
@@ -41,6 +36,11 @@ module.exports = {
             for reason: \`${reason}\``
           }
         }) && msg.reply(`\`[${user.tag} | ${user.id}]\` was whitelisted from the bot.`);
+        try {
+          user.send(`You were whitelisted from using me :boom:! For reason: \`${reason}\``);
+        } catch (error) {
+          return msg.channel.send("Could not notify user of whitelist.");
+        }
   });
   })
 

@@ -23,12 +23,7 @@ module.exports = {
 
   Sqlite.run(`INSERT INTO userblacklist (snowflake, reasonOfBlacklist) VALUES (?, ?)`, user.id, reason, (err) => {
     if (err) console.log(err);
-    try {
-      user.send(`You were blacklisted from using me, for reason: \`${reason}\``);
-    } catch (error) {
-      return msg.channel.send("Could not notify user of blacklist.");
-    }
-    return client.channels.get(ids.blacklists).send({
+    client.channels.get(ids.blacklists).send({
       embed: {
             color: 0xf4bc42,
             timestamp: new Date(),
@@ -41,6 +36,11 @@ module.exports = {
             for reason: \`${reason}\``
           }
         }) && msg.reply(`\`[${user.tag} | ${user.id}]\` was blacklisted from the bot.`);
+        try {
+          user.send(`You were blacklisted from using me, for reason: \`${reason}\``);
+        } catch (error) {
+          return msg.channel.send("Could not notify user of blacklist.");
+        }
   });
   })
 
