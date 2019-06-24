@@ -3,6 +3,7 @@
   "support_server_id": "",
   "github_url": "",
   "blacklists": "",
+  "whitelists": "",
   "guild_join": "",
   "guild_leave": "",
   "restarts": ""
