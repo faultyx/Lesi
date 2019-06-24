@@ -19,7 +19,7 @@ const tables = {
     "reasonOfBlacklist TEXT NOT NULL"
   ]
 }
-  for(let table in tables) {
+  for (let table in tables) {
   	db.run(`CREATE TABLE ${table} (${tables[table].join(", ")})`, () => {
   		console.log(chalk.blue("[SQLITE: TABLE: CREATE]:") + ` ${table}`);
   	})
