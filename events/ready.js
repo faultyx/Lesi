@@ -7,7 +7,7 @@ mongoose.connect("mongodb://localhost:27017/lesi_new_db", {
   useNewUrlParser: true
 }).then(() => console.log(chalk.grey("[MONGOOSE: CONNECTED]:")));
 module.exports = {
-  execute(client) {
+  execute: async (client) => {
   client.user.setPresence({
     game: {
       type: 0,
@@ -24,9 +24,14 @@ module.exports = {
         const newSettings = new Settings({
           _id: mongoose.Schema.Types.ObjectId,
           guildID: id,
-          prefix: keys.defaultPrefix
+          prefix: keys.defaultPrefix,
+          modules: {
+            fun: true,
+            guild: true
+          }
         })
         await newSettings.save().catch(err => console.log(err));
+        return console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${id}"`));
        }
       }
     });
