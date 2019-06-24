@@ -9,14 +9,8 @@ const settingSchema = mongoose.Schema({
     default: defaultPrefix
   },
   modules: {
-    fun: {
-      type: String,
-      default: true
-    },
-    guild: {
-      type: String,
-      default: true
-    }
+    fun: String,
+    guild: String
   }
 });
 
