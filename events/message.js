@@ -34,8 +34,6 @@ module.exports = {
       if (r) return msg.reply(`You are blacklisted from the bot for reason: \`${r.reasonOfBlacklist}\` | You can contact the developer or staff in: ${ids.support_server} to make a appeal!`);
     });
 
-  });
-
   const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 
   if (!cmd) return;
@@ -98,6 +96,8 @@ module.exports = {
   };
 
   cmd.execute(client, msg, args, ids, keys, Sqlite);
+
+  });
 
   }
 };
