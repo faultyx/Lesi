@@ -7,6 +7,10 @@ const settingSchema = mongoose.Schema({
   prefix: {
     type: String,
     default: defaultPrefix
+  },
+  modules: {
+    fun: String,
+    guild: String
   }
 });
 
