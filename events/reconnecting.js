@@ -1,6 +1,6 @@
-const { red } = require("chalk");
+const { green } = require("chalk");
 module.exports = {
   execute(client, guild) {
-  console.log(red(`[RECONNECTING: AT]: ${new Date()}`));
+  console.log(green(`[RECONNECTING: AT]: ${new Date()}`));
   }
 };
