@@ -10,7 +10,7 @@ module.exports = {
 }
   if (msg.author.id !== keys.developerID) {
       return;
-    }
+    };
     let evaluateCode = args.join(" ");
     if (!evaluateCode) {
       return msg.reply("Please give some code to evaluate!");
