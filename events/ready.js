@@ -20,9 +20,7 @@ module.exports = {
       guildID: id
     }, (err, settings) => {
       if (!settings) {
-        async () => {
         const newSettings = new Settings({
-          _id: mongoose.Schema.Types.ObjectId,
           guildID: id,
           prefix: keys.defaultPrefix,
           modules: {
@@ -30,12 +28,11 @@ module.exports = {
             guild: true
           }
         })
-        await newSettings.save().catch(err => console.log(err));
+        newSettings.save().catch(err => console.log(err));
         return console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${id}"`));
        }
-      }
+     });
     });
-  });
   console.log(chalk.green("[READY]:"));
 
   const channel = client.channels.get(ids.restarts);
