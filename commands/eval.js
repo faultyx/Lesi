@@ -89,7 +89,7 @@ module.exports.help = {
   nam: "eval",
   mod: "core",
   desc: "Evaluate js code.",
-  usa: "[prefix]eval [code",
+  usa: "[prefix]eval [code]",
   exa: [">eval client.ping"]
 };
 module.exports.conf = {
