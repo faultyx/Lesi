@@ -8,13 +8,13 @@ module.exports = {
   else
   return text;
 }
-  let evaluateCode = args.join(" ");
   if (msg.author.id !== keys.developerID) {
       return;
     }
+    let evaluateCode = args.join(" ");
     if (!evaluateCode) {
       return msg.reply("Please give some code to evaluate!");
-    }
+    };
 
     try {
 
@@ -24,11 +24,11 @@ module.exports = {
      evaled = require("util").inspect(evaled);
      if (evaled.includes(client.token)) {
        return;
-      }
+      };
 
       if (evaled.length > 1020) {
         evaled = evaled.substr(0, 990);
-      }
+      };
 
       msg.react("✅");
 
