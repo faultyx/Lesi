@@ -2,7 +2,7 @@ module.exports = {
   execute: async (client, msg, args, ids, keys) => {
 
 const message = await msg.channel.send("Ping?");
-message.edit(`:ping_pong: Pong! \`${message.createdTimestamp - msg.createdTimestamp}ms\` | \`${Math.round(client.ping)}ms\``);
+message.edit(`:ping_pong: Pong!\n Message: \`${message.createdTimestamp - msg.createdTimestamp}ms\` \n API: \`${Math.round(client.ping)}ms\``);
 
   }
 };
