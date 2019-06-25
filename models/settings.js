@@ -4,10 +4,7 @@ const { defaultPrefix } = require("../keys");
 const settingSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   guildID: String,
-  prefix: {
-    type: String,
-    default: defaultPrefix
-  },
+  prefix: String,
   modules: {
     fun: String,
     guild: String
