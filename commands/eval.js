@@ -97,5 +97,5 @@ module.exports.conf = {
   guildOnly: false,
   ownerOnly: false,
   developerOnly: true,
-  hiddenFromHelp: false
+  hiddenFromHelp: true
 };
