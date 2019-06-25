@@ -30,7 +30,7 @@ module.exports = {
         evaled = evaled.substr(0, 990);
       }
 
-      msg.react("✅")
+      msg.react("✅");
 
       msg.channel.send({
         embed: {
@@ -57,7 +57,7 @@ module.exports = {
 
     } catch (err) {
 
-      msg.react("❎")
+      msg.react("❎");
 
       msg.channel.send({
         embed: {
