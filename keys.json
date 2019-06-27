@@ -2,5 +2,11 @@
   "developerID": "",
   "clientID": "",
   "l_token": "",
-  "defaultPrefix": ">"
+  "defaultPrefix": ">",
+    "mongodb": {
+    "username": "",
+    "password": "",
+    "clusterName": "",
+    "clusterId": ""
+  }
 }
