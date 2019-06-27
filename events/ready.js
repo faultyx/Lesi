@@ -3,7 +3,7 @@ ids = require("../ids"),
 keys = require("../keys"),
 mongoose = require("mongoose");
 const Settings = require("../models/settings");
-mongoose.connect("mongodb://localhost:27017/lesi_new_db", {
+mongoose.connect(`mongodb+srv://${keys.mongodb.username}:${keys.mongodb.password}@${keys.mongodb.clusterName}-${keys.mongodb.clusterId}.mongodb.net/lesidb`, {
   useNewUrlParser: true
 }).then(() => console.log(chalk.grey("[MONGOOSE: CONNECTED]:")));
 module.exports = {
