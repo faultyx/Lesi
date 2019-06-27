@@ -1,6 +1,6 @@
 const sa = require("superagent");
 module.exports = {
-  execute: async (client, msg, args) => {
+  execute(client, msg, args) {
   sa.get("https://random.dog/woof.json")
   .end((err, res) => {
   if (!err && res.status === 200) {
