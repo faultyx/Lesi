@@ -4,7 +4,6 @@ keys = require("../keys"),
 mongoose = require("mongoose");
 
 const Settings = require("../models/settings"),
-Users = require("../models/users");
 
 mongoose.connect(`mongodb+srv://${keys.mongodb.username}:${keys.mongodb.password}@${keys.mongodb.clusterName}-${keys.mongodb.clusterId}.mongodb.net/lesidb`, {
   useNewUrlParser: true
@@ -36,20 +35,6 @@ module.exports = {
        }
      });
     });
-      client.users.keyArray().forEach(id => {
-      Users.findOne({
-        userID: id
-      }, (err, settings) => {
-        if (!settings) {
-          const newUser = new Users({
-            userID: id,
-            description: "No description set."
-          })
-          newUser.save().catch(err => console.log(err));
-          console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for user: "${id}"`));
-         }
-       });
-      });
   console.log(chalk.green("[READY]:"));
 
   const channel = client.channels.get(ids.restarts);
