@@ -1,3 +1,4 @@
+// this is a very basic help command, temporary for now. It will be updated and advanced later
 const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute(client, msg, args) {
