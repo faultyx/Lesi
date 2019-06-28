@@ -1,6 +1,24 @@
 const ids = require("../ids");
+const keys = require("../keys");
+const Settings = require("../models/settings");
 module.exports = {
   execute(client, guild) {
+      Settings.findOne({
+      guildID: guild.id
+    }, (err, settings) => {
+      if (!settings) {
+        const newSettings = new Settings({
+          guildID: guild.id,
+          prefix: keys.defaultPrefix,
+          modules: {
+            fun: true,
+            guild: true
+          }
+        })
+        newSettings.save().catch(err => console.log(err));
+        return console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${id}"`));
+       }
+     });
   let channel = client.channels.get(ids.guild_join);
   if (!channel) return;
   channel.send({
