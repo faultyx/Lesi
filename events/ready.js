@@ -32,7 +32,7 @@ module.exports = {
           }
         })
         newSettings.save().catch(err => console.log(err));
-        return console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${id}"`));
+        console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${id}"`));
        }
      });
     });
