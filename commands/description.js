@@ -7,6 +7,14 @@ module.exports = {
       userID: msg.author.id
     }, (err, settings) => {
       if (!args[0]) {
+        if (!settings) {
+          const newUser = new Users({
+            userID: msg.author.id,
+            description: "No description set."
+          })
+          newUser.save().catch(err => console.log(err));
+          return msg.reply("You were not in the database, I have added you now. Please re-run this command to see your default description or simply add some text after the command to set a new description");
+        }
         return msg.reply(`**Your current description:**\n${settings.description}`);
       } else {
         let newDescription = args.join(" ");
