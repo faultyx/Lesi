@@ -3,20 +3,17 @@ const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute(client, msg, args, ids, keys) {
     if (cooldown(msg, "prefix", 4000, "4 seconds")) {
-    if (msg.member.roles.has(msg.guild.roles.find(r => r.name.toLowerCase() === "moderators").id)) {
+    if (!msg.author.hasPermission("ADMINISTRATOR")) return msg.reply("Insufficient permissions, you need \`ADMINISTRATOR\` to use this command.");
   Settings.findOne({
     guildID: msg.guild.id
   }, (err, settings) => {
   if (!args[0]) {
-    return msg.channel.send(`Current Guild Prefix: \`${settings.prefix}\`\n**Please note that this command originally requires MANAGE_GUILD permissions but for DBL Testers it has been set to have Moderators role.**`);
+    return msg.channel.send(`Current Guild Prefix: \`${settings.prefix}\``);
   } else {
     let newPrefix = args.join(" ");
     Settings.updateOne({guildID: msg.guild.id, prefix: newPrefix}).then(() => msg.reply(`Set new guild prefix to: \`${newPrefix}\``));
   }
   });
-} else {
-  return;
-}
    };
   }
 };
