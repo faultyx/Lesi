@@ -46,7 +46,7 @@ module.exports = {
             description: "No description set."
           })
           newUser.save().catch(err => console.log(err));
-          return console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for user: "${id}"`));
+          console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for user: "${id}"`));
          }
        });
       });
