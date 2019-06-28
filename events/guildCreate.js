@@ -1,8 +1,7 @@
 const ids = require("../ids");
 module.exports = {
   execute(client, guild) {
-  // let channel = client.channels.get(ids.guild_join);
-  let channel = client.channels.get(ids.temp);
+  let channel = client.channels.get(ids.guild_join);
   if (!channel) return;
   channel.send({
     embed: {
