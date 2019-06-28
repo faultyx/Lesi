@@ -36,7 +36,7 @@ module.exports = {
        }
      });
     });
-        client.users.keyArray().forEach(id => {
+      client.users.keyArray().forEach(id => {
       Users.findOne({
         userID: id
       }, (err, settings) => {
