@@ -22,7 +22,7 @@ module.exports = {
             },
             {
               name: "Guild:",
-              value: "\`prefix\`"
+              value: "\`prefix, description\`"
             }
           ]
         }
