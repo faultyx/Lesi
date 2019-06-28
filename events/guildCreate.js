@@ -11,7 +11,7 @@ module.exports = {
       footer: {
         text: "Joined a new Guild."
       },
-      description: `**Owner:** \`[${guild.owner.user.tag} | ${guild.owner.id}]\`\n**Server:** \`${guild.name.substring(0, 100)}\`\n**Member Count:** \`${guild.memberCount}\``
+      description: `**Owner:** \`[${guild.owner.user.tag} | ${guild.owner.id}]\`\n**Server:** \`${guild.name.substring(0, 100)}\`\n**Members:** \`${guild.memberCount}\``
     }
   })
   }
