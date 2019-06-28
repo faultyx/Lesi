@@ -48,7 +48,7 @@ module.exports = {
 };
 module.exports.help = {
   nam: "userblacklist",
-  mod: "core",
+  mod: "staff",
   desc: "Blacklist a user from the bot.",
   usa: "[prefix]userblacklist [userID] [reason]",
   exa: [">userblacklist 12345678910 Abuse"]

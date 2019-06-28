@@ -1,7 +1,8 @@
-const Discord = require("discord.js");
 const ns = require("node-superfetch");
+const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute: async (client, msg, args) => {
+  if (cooldown(msg, "bird", 4000, "4 seconds")) {
   try {
   const { body } = await ns
   .get("https://shibe.online/api/birds")
@@ -23,7 +24,7 @@ module.exports = {
   console.log(error);
   return msg.channel.send("There was an error trying to get a bird image.");
 }
-
+};
   }
 };
 module.exports.help = {

@@ -48,7 +48,7 @@ module.exports = {
 };
 module.exports.help = {
   nam: "userwhitelist",
-  mod: "core",
+  mod: "staff",
   desc: "Whitelist a user from the bot.",
   usa: "[prefix]userwhitelist [userID] [reason]",
   exa: [">userwhitelist 12345678910 Time Over!"]

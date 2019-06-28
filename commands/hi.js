@@ -1,7 +1,9 @@
+const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute(client, msg, args, ids, keys) {
+  if (cooldown(msg, "hi", 4000, "4 seconds")) {
   return msg.reply("Hey! >:D");
-
+   };
   }
 };
 

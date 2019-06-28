@@ -1,6 +1,8 @@
 const sa = require("superagent");
+const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute(client, msg, args) {
+  if (cooldown(msg, "dog", 4000, "4 seconds")) {
   sa.get("https://random.dog/woof.json")
   .end((err, res) => {
   if (!err && res.status === 200) {
@@ -18,7 +20,7 @@ module.exports = {
   }
 
   });
-
+   };
   }
 };
 module.exports.help = {
