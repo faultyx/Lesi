@@ -4,7 +4,7 @@
 ## Setup
 ### Windows:
 #### Needed:
-GIT, NODE.JS
+Git & Node.js
 
 #### Instructions:
 Download the bot as ZIP | Or clone with GIT "https://github.com/faultyx/Lesi.git" > git clone link
@@ -34,3 +34,5 @@ keys need your personal id, your bot token and your bot id etc
 after all this done, you may open the terminal if you closed it, on the right folder path and run "node ." or "node index.js"
 
 Enjoy!
+
+**Still need help? Join: https://discord.gg/hVF4dc6**
