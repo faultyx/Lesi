@@ -9,7 +9,7 @@ GIT, NODE.JS
 #### Instructions:
 Download the bot as ZIP | Or clone with GIT "https://github.com/faultyx/Lesi.git" > git clone link
 
-Open folder and open terminal, "shift + right click" you will either see Powershell or Command Prompt.
+Open folder and open terminal. In the folder you can do "shift + right click" you will either see Powershell or Command Prompt.
 Making sure the terminal is on the path of the bot folder
 
 Run "npm i" or "npm install" and let all packages download.
