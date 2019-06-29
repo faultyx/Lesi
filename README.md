@@ -20,6 +20,7 @@ then you must paste or type this in: "npm install --global windows-build-tools -
 Windows 10: ^ above
 
 Windows 7: Click windows button and type in the search bar "cmd" after coming up, right click on the cmd and click the "Admin Option"
+
 Windows 8: Move your mouse to the corner and let the search bar come, in there you can do the same steps as Windows 7 above^
 
 Sit back and let it finish, more instructions available at: https://discord.gg/plexidev
