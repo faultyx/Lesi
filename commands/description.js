@@ -13,12 +13,12 @@ module.exports = {
             description: "No description set."
           })
           newUser.save().catch(err => console.log(err));
-          return msg.reply("You were not in the database, I have added you now. Please re-run this command to see your default description or simply add some text after the command to set a new description.");
+          return msg.reply("You were not in the database, but I have added you now. Please re-run this command to see your default description or simply add some text after the command to set a new description.");
         }
         return msg.reply(`**Your current description:**\n${settings.description}`);
       } else {
         let newDescription = args.join(" ");
-        if (newDescription.length > 40) return msg.reply("Your description is too long! Please make it under 40 characters.");
+        if (newDescription.length > 30) return msg.reply("Your description is too long! Please make it under 30 characters.");
         Users.updateOne({userID: msg.author.id, description: newDescription}).then(() => msg.reply("Successfully updated your description!"));
       }
     });
