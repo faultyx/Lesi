@@ -14,16 +14,16 @@ Making sure the terminal is on the path of the bot folder
 
 Run "npm i" or "npm install" and let all packages download.
 
-If for some reason this fails, you can do "right click on windows button at the left hand corner" then click on "Open Cmd as Admin"
-then you must paste or type this in: "npm install --global windows-build-tools --vs2015"
+**If for some reason this fails, you can do "right click on windows button at the left hand corner" then click on "Open Cmd as Admin"
+then you must paste or type this in: "npm install --global windows-build-tools --vs2015"**
 
-Windows 10: ^ above
+**Windows 10: ^ above**
 
-Windows 7: Click windows button and type in the search bar "cmd" after coming up, right click on the cmd and click the "Admin Option"
+**Windows 7: Click windows button and type in the search bar "cmd" after coming up, right click on the cmd and click the "Admin Option"**
 
-Windows 8: Move your mouse to the corner and let the search bar come, in there you can do the same steps as Windows 7 above^
+**Windows 8: Move your mouse to the corner and let the search bar come, in there you can do the same steps as Windows 7 above^**
 
-Sit back and let it finish, more instructions available at: https://discord.gg/plexidev
+**Sit back and let it finish, more instructions available at: https://discord.gg/plexidev**
 
 After all those packages done downloading, you can open the keys and ids JSON files and edit them
 
