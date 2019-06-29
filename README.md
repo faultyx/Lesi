@@ -6,7 +6,7 @@
 #### Needed:
 GIT, NODE.JS
 
-#### Instructions
+#### Instructions:
 Download the bot as ZIP | Or clone with GIT "https://github.com/faultyx/Lesi.git" > git clone link
 
 Open folder and open terminal, "shift + right click" you will either see Powershell or Command Prompt.
