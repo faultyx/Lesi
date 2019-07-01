@@ -3,29 +3,29 @@
 ### For DBL Testers, <code>prefix</code> command has been set to a role, you must have the "Moderators" role.
 ---------------------------------------------------
 ## Lesi Command List: [1] - <code>Default Bot Prefix: ></code>
-*Core: ping, help, uptime.*
+<code>*Core: ping, help, uptime.*</code>
 
-*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog.*
+<code>*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog.*</code>
 
-*Information: userinfo, serverinfo.*
+<code>*Information: userinfo, serverinfo.*</code>
 
-*Guild: description, prefix[ADMINISTRATOR REQUIRED].*
+<code>*Guild: description, prefix[ADMINISTRATOR REQUIRED].*</code>
 
-*Staff: userblacklist, userwhitelist.*
+<code>*Staff: userblacklist, userwhitelist.*</code>
 
 ---------------------------------------------------
 
 ## Lesi Command List: [2] - <code>Default Bot Prefix: ></code>
-*Core: ping, help, uptime.*
+<code>*Core: ping, help, uptime.*</code>
 
-*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog.*
+<code>*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog.*</code>
 
-*Information: userinfo, serverinfo.*
+<code>*Information: userinfo, serverinfo.*</code>
 
-*Guild: description, prefix[ADMINISTRATOR REQUIRED].*
+<code>*Guild: description, prefix[ADMINISTRATOR REQUIRED].*</code>
 
-*Staff: userblacklist, userwhitelist.*
+<code>*Staff: userblacklist, userwhitelist.*</code>
 
 ---------------------------------------------------
 
-*NSFW: 4k*
+<code>*NSFW: 4k*</code>
