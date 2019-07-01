@@ -1,9 +1,9 @@
 # Lesi
 ❤️ Lesi the Simple Discord Bot.
-
+--------------------------------
 ## Command List:
 *See commandList.md*
-
+--------------------
 ## Setup
 ### Windows:
 #### Needed:
