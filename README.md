@@ -3,7 +3,7 @@
 --------------------------------
 ## Command List:
 *See commandList.md*
---------------------
+
 ## Setup
 ### Windows:
 #### Needed:
