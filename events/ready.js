@@ -13,7 +13,7 @@ module.exports = {
   client.user.setPresence({
     game: {
       type: 0,
-      name: `>help | On ${client.guilds.size} Servers`
+      name: `${keys.defaultPrefix}help | On ${client.guilds.size} Servers`
     }
   });
 
