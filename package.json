@@ -1,6 +1,6 @@
 {
   "name": "lesi",
-  "version": "0.0.7",
+  "version": "0.0.7.62",
   "description": "Lesi the Simple Discord Bot",
   "main": "index.js",
   "scripts": {
