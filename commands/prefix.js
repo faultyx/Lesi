@@ -3,7 +3,7 @@ const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute(client, msg, args, ids, keys) {
     if (cooldown(msg, "prefix", 4000, "4 seconds")) {
-    if (!msg.author.hasPermission("ADMINISTRATOR")) return msg.reply("Insufficient permissions, you need \`ADMINISTRATOR\` to use this command.");
+    if (!msg.member.hasPermission("ADMINISTRATOR")) return msg.reply("Insufficient permissions, you need \`ADMINISTRATOR\` to use this command.");
   Settings.findOne({
     guildID: msg.guild.id
   }, (err, settings) => {
