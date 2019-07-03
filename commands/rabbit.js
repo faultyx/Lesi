@@ -6,7 +6,7 @@ module.exports = {
     let imgs = Math.floor(Math.random() * 80);
     let url = ["https://www.reddit.com/r/Rabbits/.json?sort=rising&t=hour&limit=100"];
     request({
-      method: 'GET',
+      method: "GET",
       uri: url[Math.floor(Math.random() * url.length)]
     }, function (err, response, data) {
       if(err) {
