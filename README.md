@@ -1,5 +1,5 @@
-# Lesi
-❤️ Lesi the Simple Discord Bot.
+# ❤️ Lesi the Simple Discord Bot.
+![Powered by NodeJS](https://img.shields.io/badge/powered%20by-nodejs-blue.svg)
 --------------------------------
 ## Command List:
 *See commandList.md*
