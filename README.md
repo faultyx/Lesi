@@ -39,3 +39,5 @@ after all this done, you may open the terminal if you closed it, on the right fo
 Enjoy!
 
 **Still need help? Join: https://discord.gg/hVF4dc6**
+
+[![Discord Bots](https://discordbots.org/api/widget/589850196675133490.svg)](https://discordbots.org/bot/589850196675133490)
