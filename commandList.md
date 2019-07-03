@@ -10,3 +10,5 @@
 <code>*Staff: userblacklist, userwhitelist.*</code>
 
 <code>*NSFW: 4k, boobs.*</code>
+
+<code>*Special for Lesi Support Server: join, leave.*</code>
