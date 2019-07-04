@@ -1,7 +1,7 @@
 ## Lesi Command List: - <code>Default Bot Prefix: ></code>
 <code>*Core: ping, help, uptime, changelog.*</code>
 
-<code>*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog, rabbit, meme.*</code>
+<code>*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog, rabbit, meme, kissmarrykill.*</code>
 
 <code>*Information: userinfo, serverinfo.*</code>
 
