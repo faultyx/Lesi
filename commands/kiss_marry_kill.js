@@ -19,11 +19,11 @@ module.exports = {
       arr[j] = temp;
       }
       return arr;
-      }
+      };
 
-      const things = shuffleList([user1, user2, user3])
+      const results = shuffleList([user1, user2, user3]);
 
-      return msg.channel.send(`I'd kiss **${things[0]}**\nMarry **${things[1]}**\nKill **${things[2]}**`);
+      return msg.channel.send(`I'd kiss **${results[0]}**\nMarry **${results[1]}**\nKill **${results[2]}**`);
     }
   }
 };
