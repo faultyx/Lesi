@@ -1,5 +1,5 @@
 ## Lesi Command List: - <code>Default Bot Prefix: ></code>
-<code>*Core: ping, help, uptime, changelog.*</code>
+<code>*Core: ping, help, uptime, changelog, upvote.*</code>
 
 <code>*Fun: 8ball, donaldtrumpquote, chucknorris, hi, kao, bird, catfact, dogfact, fox, dog, rabbit, meme, kissmarrykill.*</code>
 
@@ -11,4 +11,4 @@
 
 <code>*NSFW: 4k, boobs.*</code>
 
-<code>*Special for Lesi Support Server: join, leave.*</code>
+<code>*Lesi Support Server: join, leave.*</code>
