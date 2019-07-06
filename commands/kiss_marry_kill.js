@@ -36,7 +36,7 @@ module.exports.help = {
 };
 module.exports.conf = {
   aliases: ["kmk"],
-  guildOnly: false,
+  guildOnly: true,
   ownerOnly: false,
   developerOnly: false,
   hiddenFromHelp: false
