@@ -21,7 +21,7 @@ module.exports = {
     if (err) console.log(err);
     if (!r) return msg.reply("That user is not blacklisted.");
 
-  Sqlite.run(`DELETE FROM userblacklist WHERE snowflake = ?`, user.id, (err) => {
+  Sqlite.run(`DELETE FROM user WHERE snowflake = ?`, user.id, (err) => {
     if (err) console.log(err);
     client.channels.get(ids.whitelists).send({
       embed: {
