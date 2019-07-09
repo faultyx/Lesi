@@ -21,7 +21,7 @@ module.exports = {
     if (err) console.log(err);
     if (r) return msg.reply("That user is already blacklisted.");
 
-  Sqlite.run(`INSERT INTO userblacklist (snowflake, reasonOfBlacklist) VALUES (?, ?)`, user.id, reason, (err) => {
+  Sqlite.run(`INSERT INTO user (snowflake, reasonOfBlacklist) VALUES (?, ?)`, user.id, reason, (err) => {
     if (err) console.log(err);
     client.channels.get(ids.blacklists).send({
       embed: {
