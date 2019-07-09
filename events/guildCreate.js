@@ -17,7 +17,7 @@ module.exports = {
           }
         })
         newSettings.save().catch(err => console.log(err));
-        console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${id}"`));
+        console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${guild.id}"`));
        }
      });
   let channel = client.channels.get(ids.guild_join);
