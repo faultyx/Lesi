@@ -17,7 +17,7 @@ const tables = {
 }
   for (let table in tables) {
   	db.run(`CREATE TABLE ${table} (${tables[table].join(", ")})`, () => {
-  		console.log(chalk.blue("[SQLITE: TABLE: CREATE]:") + ` ${table}`);
+  		console.log(chalk.blue("[SQLITE: TABLE: CREATE]: ") + table);
   	})
   }
 module.exports = db;
