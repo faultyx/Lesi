@@ -17,7 +17,7 @@ module.exports = {
           }
         })
         newSettings.save().catch(err => console.log(err));
-        console.log(chalk.grey("[MONGOOSE: INSERT]:" + ` Set settings for guild: "${guild.id}"`));
+        console.log(chalk.grey("[MONGOOSE: INSERT]: " + `Set settings for guild: "${guild.id}"`));
        }
      });
   let channel = client.channels.get(ids.guild_join);
@@ -29,7 +29,7 @@ module.exports = {
       footer: {
         text: "Joined a new Guild."
       },
-      description: `**Owner:** \`[${guild.owner.user.tag} | ${guild.owner.id}]\`\n**Server:** \`${guild.name.substring(0, 100)}\`\n**Members:** \`${guild.memberCount}\``
+      description: `**Owner:** \`[${guild.owner.user.tag} | ${guild.owner.id}]\`\n**Server:** \`${guild.name}\`\n**Members:** \`${guild.memberCount}\``
     }
   })
   }
