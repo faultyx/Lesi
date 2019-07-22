@@ -14,9 +14,9 @@ module.exports = {
       const arr = array.slice(0);
       for (let i = arr.length - 1; i >= 0; i--) {
       const m = Math.floor(Math.random() * (i + 1));
-      const temp = arr[i];
+      const rs = arr[i];
       arr[i] = arr[m];
-      arr[m] = temp;
+      arr[m] = rs;
       }
       return arr;
       };
