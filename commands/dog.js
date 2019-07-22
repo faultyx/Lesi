@@ -8,6 +8,7 @@ module.exports = {
   if (!err && res.status === 200) {
     return msg.channel.send(`**Requested by:** ${msg.author.toString()}`, {
       embed: {
+        title: "🐶",
         color: 0xffffff,
         timestamp: new Date(),
         image: {

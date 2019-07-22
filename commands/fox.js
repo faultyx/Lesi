@@ -2,22 +2,16 @@ const ns = require("node-superfetch");
 const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute: async (client, msg, args) => {
-  if (cooldown(msg, "bird", 4000, "4 seconds")) {
+  if (cooldown(msg, "fix", 4000, "4 seconds")) {
   try {
-  const { body } = await ns
-  .get("https://shibe.online/api/birds")
-  .query({
-    count: 1,
-    urls: true,
-    httpsUrls: true
-  });
+  const { body } = await ns.get("https://randomfox.ca/floof/");
   return msg.channel.send(`**Requested by:** ${msg.author.toString()}`, {
     embed: {
-      title: "🐦",
+      title: "🦊",
       color: 0xffffff,
       timestamp: new Date(),
       image: {
-        url: body[0]
+        url: body.image
       }
     }
   });
@@ -29,14 +23,14 @@ module.exports = {
   }
 };
 module.exports.help = {
-  nam: "bird",
+  nam: "fox",
   mod: "fun",
-  desc: "Get a bird image!",
-  usa: "[prefix]bird",
-  exa: [">bird"]
+  desc: "Get a fox image!",
+  usa: "[prefix]fox",
+  exa: [">fox"]
 };
 module.exports.conf = {
-  aliases: ["birdy"],
+  aliases: [],
   guildOnly: false,
   ownerOnly: false,
   developerOnly: false,
