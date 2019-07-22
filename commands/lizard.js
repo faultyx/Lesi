@@ -1,10 +1,10 @@
-const snekfetch = require("snekfetch");
+const sf = require("snekfetch");
 const cooldown = require("../utils/Cooldown");
 module.exports = {
   execute: async (client, msg, args) => {
     if (cooldown(msg, "lizard", 4000, "4 seconds")) {
       try {
-      const res = await snekfetch.get("https://nekos.life/api/lizard");
+      const res = await sf.get("https://nekos.life/api/lizard");
       return msg.channel.send(`**Requested by:** ${msg.author.toString()}`, {
         embed: {
           title: "🦎",
