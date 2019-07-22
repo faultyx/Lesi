@@ -6,7 +6,7 @@ module.exports = {
 const message = await msg.channel.send("Ping?");
 message.edit(`:ping_pong: Pong!\nMessage: \`${message.createdTimestamp - msg.createdTimestamp}ms\`
 API: \`${Math.round(client.ping)}ms\``);
-   };
+   }
   }
 };
 
