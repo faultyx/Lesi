@@ -5,7 +5,7 @@ mongoose = require("mongoose");
 
 const Settings = require("../models/settings"),
 
-mongoose.connect(`mongodb+srv://${keys.mongodb.username}:${keys.mongodb.password}@${keys.mongodb.clusterName}-${keys.mongodb.clusterId}.mongodb.net/lesidb`, {
+mongoose.connect(`mongodb+srv://${keys.mongocloudatlas.username}:${keys.mongocloudatlas.password}@${keys.mongocloudatlas.clusterName}-${keys.mongocloudatlas.clusterId}.mongodb.net/lesidb`, {
   useNewUrlParser: true
 }).then(() => console.log(chalk.grey("[MONGOOSE: CONNECTED]:")));
 module.exports = {
