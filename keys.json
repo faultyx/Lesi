@@ -3,7 +3,7 @@
   "clientID": "",
   "l_token": "",
   "defaultPrefix": ">",
-   "mongocloud": {
+   "mongocloudatlas": {
     "username": "",
     "password": "",
     "clusterName": "",
