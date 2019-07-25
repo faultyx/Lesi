@@ -26,8 +26,8 @@ module.exports = {
           guildID: id,
           prefix: keys.defaultPrefix,
           modules: {
-            fun: true,
-            guild: true
+            fun: "true",
+            guild: "true"
           }
         })
         newSettings.save().catch(err => console.log(err));
