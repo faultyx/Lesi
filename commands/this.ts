@@ -1,1 +1,1 @@
-import 'j' from 'Discord'
+import 'j' from 'discord.js'
