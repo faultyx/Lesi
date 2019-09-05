@@ -1,4 +1,5 @@
-# ❤️ Lesi the Simple Discord Bot.
+# ❤️ Lesi.
+### ***Powered by Discord API***
 ### This bot is under development and may take some time for features & commands to be implemented.
 ![Powered by NodeJS](https://img.shields.io/badge/powered%20by-nodejs-blue.svg)
 --------------------------------
