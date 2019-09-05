@@ -1,6 +1,6 @@
-const ids = require("../ids");
-const keys = require("../keys");
-const chalk = require("chalk");
+const ids = require("../ids"),
+keys = require("../keys"),
+chalk = require("chalk");
 const Settings = require("../models/settings");
 module.exports = {
   execute(client, guild) {
