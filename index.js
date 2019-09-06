@@ -1,4 +1,4 @@
-process.title = "Lesi | The simple Discord Bot";
+process.title = "Lesi.";
 
 const Discord = require("discord.js"),
 fs = require("fs"),
