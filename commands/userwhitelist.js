@@ -12,7 +12,7 @@ module.exports = {
   };
   if (!id) return msg.reply("You forgot to give a ID or mention a user!");
   let user = client.users.get(id);
-  if (!user === null || undefined) user = msg.guild.fetchBans(id).user;
+  if (!user === null || undefined) user = msg.guild.fetchBans(id).user || return msg.reply("Invalid ID or fetch failed. Try again.");
   let reason = args[1];
   if (!reason) reason = "No reason provided.";
 
