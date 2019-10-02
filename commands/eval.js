@@ -27,7 +27,7 @@ module.exports = {
       };
 
       if (evaled.length > 1020) {
-        evaled = evaled.substr(0, 990);
+        evaled = evaled.substr(0, 100);
       };
 
       msg.react("✅");
