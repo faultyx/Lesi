@@ -1,6 +1,6 @@
 # ❤️ Lesi.
 ### ***Powered by Discord API***
-### This bot is under development and may take some time for features & commands to be implemented.
+### Discontinued. Code is free to use by anyone. Thank you.
 ![Powered by NodeJS](https://img.shields.io/badge/powered%20by-nodeJS-green)
 --------------------------------
 [![Lesi on DBL](https://discordbots.org/api/widget/589850196675133490.svg)](https://discordbots.org/bot/589850196675133490)
